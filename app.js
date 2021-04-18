@@ -41,7 +41,6 @@ function charts(sample) {
     var layout = {
         title: "Top Ten OTUs for Test Subject ID " +sample,
         margin: {l: 100, r: 100, t: 100, b: 100},
-        // font: { color: "#49a81d", family: "Arial, Helvetica, sans-serif" }
     };
     Plotly.newPlot("bar", chartData, layout, {responsive: true});  
 
@@ -60,7 +59,7 @@ function charts(sample) {
     var chartData = [trace2];
     var layout = {
         title: 'Microbial Species per Sample',
-        // showlegend: false,
+        showlegend: false,
         hovermode: 'closest',
         xaxis: {title:"OTU ID " +sample},
     };
