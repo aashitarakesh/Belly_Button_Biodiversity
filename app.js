@@ -2,7 +2,7 @@
 function init(){
     var selector = d3.select("#selDataset");
 
-    d3.json("/data/samples.json").then((importedData) =>{
+    d3.json("./data/samples.json").then((importedData) =>{
         var data = importedData;
     
         var subjectID = data.names;
@@ -21,7 +21,7 @@ function init(){
 function charts(sample) { 
  // Use D3 fetch to read the JSON file
 // The data from the JSON file is arbitrarily named importedData as the argument   
-    d3.json("/data/samples.json").then((importedData) => {
+    d3.json("./data/samples.json").then((importedData) => {
     var samples = importedData.samples;
     var filteredData = samples.filter(row => row.id == sample);
     var result = filteredData[0];
@@ -72,7 +72,7 @@ function charts(sample) {
 function metadata(sample) {  
 // Use D3 fetch to read the JSON file
 // The data from the JSON file is arbitrarily named importedData as the argument   
-    d3.json("/data/samples.json").then((importedData) => {
+    d3.json("./data/samples.json").then((importedData) => {
         var metadata = importedData.metadata;
         var filteredData = metadata.filter(row => row.id == parseInt(sample));
         var result = filteredData[0];
